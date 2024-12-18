@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Cinemas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="js/script.js" defer></script>
+    <script src="js/cinemas.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>CineHaven</h1>
+            <div class="nav-links">
+                <a href="index.html#now-showing">Now Showing</a>
+                <a href="coming-soon.html">Coming Soon</a>
+                <a href="cinemas.html" class="active">Cinemas</a>
+            </div>
+            <div class="cart-container">
+                <button id="cart-btn" class="cart-btn" aria-label="Shopping cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cart-count">0</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="cinemas-page">
+        <section class="hero-banner cinema-banner">
+            <div class="hero-content">
+                <h1>Our Cinemas</h1>
+                <p>Experience movies in ultimate comfort and state-of-the-art technology</p>
+            </div>
+        </section>
+
+        <section class="location-filter">
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" id="location-search" placeholder="Search by location...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <select id="area-filter">
+                    <option value="">All Areas</option>
+                    <option value="north">North Lagos</option>
+                    <option value="south">South Lagos</option>
+                    <option value="east">East Lagos</option>
+                    <option value="west">West Lagos</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="cinemas-grid">
+            <div class="cinema-card">
+                <div class="cinema-image">
+                    <img src="path/to/cinema1.jpg" alt="IMAX Cinema">
+                    <div class="cinema-badge">IMAX</div>
+                </div>
+                <div class="cinema-info">
+                    <h3>MovieTix IMAX Lekki</h3>
+                    <p class="location"><i class="fas fa-map-marker-alt"></i> Lekki Phase 1, Lagos</p>
+                    <div class="amenities">
+                        <span><i class="fas fa-parking"></i> Free Parking</span>
+                        <span><i class="fas fa-wheelchair"></i> Wheelchair Access</span>
+                        <span><i class="fas fa-utensils"></i> Food Court</span>
+                    </div>
+                    <div class="cinema-actions">
+                        <button class="view-times-btn">View Showtimes</button>
+                        <button class="directions-btn"><i class="fas fa-directions"></i> Get Directions</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cinema-card">
+                <div class="cinema-image">
+                    <img src="path/to/cinema2.jpg" alt="Premium Cinema">
+                    <div class="cinema-badge">4DX</div>
+                </div>
+                <div class="cinema-info">
+                    <h3>MovieTix Victoria Island</h3>
+                    <p class="location"><i class="fas fa-map-marker-alt"></i> Victoria Island, Lagos</p>
+                    <div class="amenities">
+                        <span><i class="fas fa-parking"></i> Paid Parking</span>
+                        <span><i class="fas fa-couch"></i> VIP Lounge</span>
+                        <span><i class="fas fa-utensils"></i> Restaurant</span>
+                    </div>
+                    <div class="cinema-actions">
+                        <button class="view-times-btn">View Showtimes</button>
+                        <button class="directions-btn"><i class="fas fa-directions"></i> Get Directions</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add more cinema cards as needed -->
+        </section>
+
+        <section class="features-section">
+            <h2 style="text-align: center;">Cinema Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-film"></i>
+                    <h3>IMAX Technology</h3>
+                    <p>Experience movies in stunning IMAX quality with crystal clear images and immersive sound</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-chair"></i>
+                    <h3>Luxury Seating</h3>
+                    <p>Relax in our premium recliner seats with extra legroom and comfort</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-hamburger"></i>
+                    <h3>Premium Concessions</h3>
+                    <p>Enjoy gourmet snacks and beverages delivered right to your seat</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>MovieTix</h3>
+                <p>Your premier movie ticket booking destination</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html#now-showing">Now Showing</a></li>
+                    <li><a href="coming-soon.html">Coming Soon</a></li>
+                    <li><a href="cinemas.html">Cinemas</a></li>
+                    <li><a href="#offers">Special Offers</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 

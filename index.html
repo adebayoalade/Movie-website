@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineHaven</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://js.paystack.co/v2/inline.js"></script>
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>CineHaven</h1>
+            <div class="nav-links">
+                <a href="#index.html">Now Showing</a>
+                <a href="coming-soon.html">Coming Soon</a>
+                <a href="cinemas.html">Cinemas</a>
+            </div>
+            <div class="cart-container">
+                <button id="cart-btn" class="cart-btn" aria-label="Shopping cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cart-count">0</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-slider" id="hero-slider">
+            <!-- Movie banners will be added here -->
+        </div>
+        <div class="countdown-container">
+            <h2>Next Show Starting In</h2>
+            <div class="countdown" id="countdown">
+                <div class="time">
+                    <span id="hours">00</span>
+                    <small>Hours</small>
+                </div>
+                <div class="time">
+                    <span id="minutes">00</span>
+                    <small>Minutes</small>
+                </div>
+                <div class="time">
+                    <span id="seconds">00</span>
+                    <small>Seconds</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="now-showing" class="movies-section">
+        <h2>Now Showing</h2>
+        <div class="date-selector">
+            <button class="date-btn active" data-date="today">Today</button>
+            <button class="date-btn" data-date="tomorrow">Tomorrow</button>
+            <button class="date-btn" data-date="day-after">Day After</button>
+        </div>
+        <div class="movies-grid" id="movies-grid">
+            <!-- Movie cards will be added here -->
+        </div>
+    </section>
+
+    <section id="featured-movies" class="featured-section">
+        <h2>Featured Movies</h2>
+        <div class="featured-slider" id="featured-slider">
+            <!-- Featured movies will be added here -->
+        </div>
+    </section>
+
+    <div id="movie-modal" class="movie-modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="movie-details">
+                <!-- Movie details will be added here -->
+            </div>
+            <div class="booking-section">
+                <div class="showtime-selection">
+                    <h3>Select Showtime</h3>
+                    <div class="showtime-grid" id="showtime-grid">
+                        <!-- Showtimes will be added here -->
+                    </div>
+                </div>
+                <div class="seat-selection">
+                    <h3>Select Seats</h3>
+                    <div class="screen"></div>
+                    <div class="seats-container" id="seats-container">
+                        <!-- Seats will be added here -->
+                    </div>
+                    <div class="booking-summary">
+                        <div class="selected-info">
+                            <p>Selected Seats: <span id="selected-seats">0</span></p>
+                            <p>Total: $<span id="total-price">0.00</span></p>
+                        </div>
+                        <button id="book-tickets" class="book-btn">Book Tickets</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-content">
+            <span class="close-btn" id="close-cart">&times;</span>
+            <h2>Your Cart</h2>
+            <div id="cart-items" class="cart-items">
+                <!-- Cart items will be added here -->
+            </div>
+            <div class="cart-summary">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cart-total">₦0.00</span>
+                </div>
+                <button id="checkout-btn" class="checkout-btn">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="checkout-modal" class="checkout-modal">
+        <div class="checkout-content">
+            <span class="close-btn" id="close-checkout">&times;</span>
+            <h2>Checkout</h2>
+            <form id="checkout-form" class="checkout-form">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required placeholder="Enter your email">
+                </div>
+                <button type="submit" class="pay-btn">Pay Now</button>
+            </form>
+        </div>
+    </div>
+
+    <section class="promo-section">
+        <div class="promo-content">
+            <h2 id="specialoffers">Special Offers</h2>
+            <div class="promo-grid">
+                <div class="promo-card">
+                    <i class="fas fa-ticket-alt"></i>
+                    <h3>Student Discount</h3>
+                    <p>20% off with valid student ID</p>
+                    <button class="promo-btn">Get Offer</button>
+                </div>
+                <div class="promo-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Family Package</h3>
+                    <p>Buy 3 tickets, get 1 free</p>
+                    <button class="promo-btn">Get Offer</button>
+                </div>
+                <div class="promo-card">
+                    <i class="fas fa-popcorn"></i>
+                    <h3>Combo Deal</h3>
+                    <p>Free popcorn with every ticket</p>
+                    <button class="promo-btn">Get Offer</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="app-section">
+        <div class="app-content">
+            <div class="app-text">
+                <h2>Download Our App</h2>
+                <p>Book tickets, check showtimes, and get exclusive offers on the go!</p>
+                <div class="app-buttons">
+                    <a href="#" class="app-btn">
+                        <i class="fab fa-apple"></i>
+                        <span>
+                            Download on the<br>
+                            <strong>App Store</strong>
+                        </span>
+                    </a>
+                    <a href="#" class="app-btn">
+                        <i class="fab fa-google-play"></i>
+                        <span>
+                            Get it on<br>
+                            <strong>Google Play</strong>
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <div class="app-image">
+                <img src="https://your-image-url.com/app-mockup.png" alt="Mobile App">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-top">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>CineHavenc</h3>
+                    <p>Your premier movie ticket booking destination</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#now-showing">Now Showing</a></li>
+                        <li><a href="coming-soon.html">Coming Soon</a></li>
+                        <li><a href="cinemas.html">Cinemas</a></li>
+                        <li><a href="#specialoffers">Special Offers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Help & Support</h4>
+                    <ul>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#terms">Terms of Service</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe for exclusive offers and updates</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-content">
+                <p>&copy; 2024 MovieTix. All rights reserved.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 

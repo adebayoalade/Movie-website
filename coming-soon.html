@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="js/script.js" defer></script>
+    <script src="js/coming-soon.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>CineHaven</h1>
+            <div class="nav-links">
+                <a href="index.html#now-showing">Now Showing</a>
+                <a href="coming-soon.html" class="active">Coming Soon</a>
+                <a href="cinemas.html">Cinemas</a>
+            </div>
+            <div class="cart-container">
+                <button id="cart-btn" class="cart-btn" aria-label="Shopping cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cart-count">0</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="coming-soon-page">
+        <section class="hero-banner">
+            <div class="hero-content">
+                <h1>Coming Soon to Theaters</h1>
+                <p>Stay ahead with upcoming releases and be the first to watch</p>
+            </div>
+        </section>
+
+        <section class="movies-section">
+            <div class="filter-container">
+                <div class="search-box">
+                    <input type="text" id="movie-search" placeholder="Search upcoming movies...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="release-filter">
+                    <button class="filter-btn active" data-month="all">All</button>
+                    <button class="filter-btn" data-month="this">This Month</button>
+                    <button class="filter-btn" data-month="next">Next Month</button>
+                    <button class="filter-btn" data-month="later">Coming Later</button>
+                </div>
+                <div class="genre-filter">
+                    <select id="genre-select">
+                        <option value="">All Genres</option>
+                        <option value="action">Action</option>
+                        <option value="comedy">Comedy</option>
+                        <option value="drama">Drama</option>
+                        <option value="horror">Horror</option>
+                        <option value="sci-fi">Sci-Fi</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="movies-grid" id="coming-soon-grid">
+                <!-- Coming soon movies will be added here -->
+            </div>
+        </section>
+
+        <section class="newsletter-section">
+            <div class="newsletter-content">
+                <h2>Never Miss a Release</h2>
+                <p>Subscribe to our newsletter for updates on upcoming movies</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>MovieTix</h3>
+                <p>Your premier movie ticket booking destination</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html#now-showing">Now Showing</a></li>
+                    <li><a href="coming-soon.html">Coming Soon</a></li>
+                    <li><a href="cinemas.html">Cinemas</a></li>
+                    <li><a href="#offers">Special Offers</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 
