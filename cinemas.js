@@ -6,7 +6,7 @@ const cinemas = [
         location: 'Lekki Phase 1, Lagos',
         area: 'south',
         type: 'IMAX',
-        image: 'images/cinemas/lekki-imax.jpg',
+        image: 'https://images.pexels.com/photos/7618388/pexels-photo-7618388.jpeg?auto=compress&cs=tinysrgb&w=600',
         amenities: [
             { icon: 'fa-parking', text: 'Free Parking' },
             { icon: 'fa-wheelchair', text: 'Wheelchair Access' },
@@ -20,7 +20,7 @@ const cinemas = [
         location: 'Victoria Island, Lagos',
         area: 'south',
         type: '4DX',
-        image: 'images/cinemas/vi-4dx.jpg',
+        image: 'https://images.pexels.com/photos/2910028/pexels-photo-2910028.jpeg?auto=compress&cs=tinysrgb&w=600',
         amenities: [
             { icon: 'fa-parking', text: 'Paid Parking' },
             { icon: 'fa-couch', text: 'VIP Lounge' },
