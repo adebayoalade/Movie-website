@@ -8,7 +8,6 @@ const upcomingMovies = [
         poster: 'https://images.pexels.com/photos/7618388/pexels-photo-7618388.jpeg?auto=compress&cs=tinysrgb&w=600',
         description: 'The story of American scientist J. Robert Oppenheimer and his role in the development of the atomic bomb.'
     },
-    // Add more movies...
 ];
 
 // Filter functionality
@@ -87,7 +86,7 @@ function formatDate(dateString) {
 
 function setReminder(movieId, movieTitle) {
     // Here you would typically integrate with a notification service
-    // For now, we'll just show a toast
+    //toast
     showToast(`You'll be notified when "${movieTitle}" releases!`);
 }
 

@@ -198,7 +198,7 @@ window.addEventListener('click', (e) => {
 
 
 // API Configuration
-const OMDB_API_KEY = '9c7fa901'; // OMDB API Key
+const OMDB_API_KEY = '9c7fa901';
 const OMDB_BASE_URL = 'https://www.omdbapi.com';
 
 // Update the fetch functions
@@ -783,19 +783,19 @@ const cartStyles = `
 // Update the styles
 styleSheet.textContent += cartStyles;
 
-// Add these functions for Coming Soon section
+
 async function fetchComingSoon() {
     try {
-        // Example upcoming movie IDs (you can replace these with actual upcoming movies)
+        // Example upcoming movie IDs
         const upcomingMovieIds = [
-            'tt15398776', // Oppenheimer
-            'tt9362722',  // Spider-Man: Across the Spider-Verse
-            'tt10366206', // John Wick 4
-            'tt5090568',  // Transformers: Rise of the Beasts
-            'tt6718170',  // The Super Mario Bros. Movie
-            'tt10545296', // The Flash
-            'tt15789038', // Guardians of the Galaxy Vol. 3
-            'tt8589698'   // Dune: Part Two
+            'tt15398776',
+            'tt9362722',  
+            'tt10366206', 
+            'tt5090568', 
+            'tt6718170', 
+            'tt10545296',
+            'tt15789038',
+            'tt8589698'  
         ];
 
         const moviesWithDetails = await Promise.all(
@@ -849,14 +849,13 @@ function displayComingSoon(movies) {
 
 // Add reminder functionality
 function setReminder(movieId, movieTitle) {
-    // You can implement email/notification subscription here
     showToast(`You'll be notified when "${movieTitle}" releases!`);
 }
 
 // Paystack Integration
 function initializePayment(email, amount) {
     let handler = PaystackPop.setup({
-        key: process.env.PUBLIC_KEY, // Replace with your Paystack public key
+        key: process.env.PUBLIC_KEY,
         email: email,
         amount: Math.round(amount * 100), // Convert to kobo
         currency: 'NGN',
@@ -948,7 +947,7 @@ function closeModal(modalId) {
 
 // Helper function to show toast messages
 function showToast(message) {
-    // Create toast element if it doesn't exist
+    // Create toast element
     let toast = document.getElementById('toast');
     if (!toast) {
         toast = document.createElement('div');
@@ -966,7 +965,6 @@ function showToast(message) {
     }, 3000);
 }
 
-// Add toast styles to your CSS
 
 // Watch Trailer Functionality
 function openTrailer(videoId) {

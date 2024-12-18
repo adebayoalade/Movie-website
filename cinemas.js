@@ -28,7 +28,6 @@ const cinemas = [
         ],
         coordinates: { lat: 6.4279, lng: 3.4217 }
     },
-    // Add more cinemas...
 ];
 
 // Filter and search functionality
